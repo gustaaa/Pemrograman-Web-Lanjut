@@ -5,6 +5,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\PrefixController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,10 +48,38 @@ use App\Http\Controllers\ArticleController;
 //Route::get('/artikel/{id}', [PageController::class, 'artikel'])->name('artikel');
 
 //nomor 1
-Route::get('/', [HomeController::class, 'index'])->name('index');
+//Route::get('/', [HomeController::class, 'index'])->name('index');
 
 //nomor 2
-Route::get('/about', [AboutController::class, 'index'])->name('index');
+//Route::get('/about', [AboutController::class, 'index'])->name('index');
 
 //nomor 3
-Route::get('/artikel/{id}', [ArticleController::class, 'index'])->name('index');
+//Route::get('/artikel/{id}', [ArticleController::class, 'index'])->name('index');
+
+//Praktikum 3
+
+//nomor 1
+Route::get('/', [HomeController::class, 'index']);
+
+//nomor 2
+Route::prefix('jeniswisata')->group(function(){
+    Route::get('/gunung', [PrefixController::class, 'gunung']);
+    Route::get('/pantai', [PrefixController::class, 'pantai']);
+    Route::get('/air-terjun', [PrefixController::class, 'airterjun']);
+});
+
+//nomor 3
+Route::prefix('news')->group(function(){
+    Route::get('/', [PrefixController::class, 'news']);
+    Route::get('/virus-corona', [PrefixController::class, 'corona']);
+});
+
+//nomor 4
+Route::prefix('provinsi')->group(function(){
+    Route::get('/jawa-timur', [PrefixController::class, 'jawatimur']);
+    Route::get('/jawa-barat', [PrefixController::class, 'jawabarat']);
+    Route::get('/jawa-tengah', [PrefixController::class, 'jawatengah']);
+});
+
+//nomor 5
+Route::get('/about-us', [AboutController::class, 'index']);
