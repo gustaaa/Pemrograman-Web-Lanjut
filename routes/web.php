@@ -20,9 +20,12 @@ use App\Http\Controllers\PrefixController;
 
 //Praktikum 1
 //nomor 1
-//Route::get('/', function () {
-//   echo "Hi, Selamat Datang yaaa!";
-//});
+Route::get('/home', function () {
+   return view('home');
+});
+Route::get('/about', function () {
+    return view('about');
+ });
 
 //nomor 2
 //Route::get('/about', function () {
@@ -58,28 +61,31 @@ use App\Http\Controllers\PrefixController;
 
 //Praktikum 3
 
-//nomor 1
-Route::get('/', [HomeController::class, 'index']);
+// //nomor 1
+// Route::get('/', [HomeController::class, 'index']);
 
-//nomor 2
-Route::prefix('jeniswisata')->group(function(){
-    Route::get('/gunung', [PrefixController::class, 'gunung']);
-    Route::get('/pantai', [PrefixController::class, 'pantai']);
-    Route::get('/air-terjun', [PrefixController::class, 'airterjun']);
-});
+// //nomor 2
+// Route::prefix('jeniswisata')->group(function(){
+//     Route::get('/gunung', [PrefixController::class, 'gunung']);
+//     Route::get('/pantai', [PrefixController::class, 'pantai']);
+//     Route::get('/air-terjun', [PrefixController::class, 'airterjun']);
+// });
 
-//nomor 3
-Route::prefix('news')->group(function(){
-    Route::get('/', [PrefixController::class, 'news']);
-    Route::get('/virus-corona', [PrefixController::class, 'corona']);
-});
+// //nomor 3
+// Route::prefix('news')->group(function(){
+//     Route::get('/', [PrefixController::class, 'news']);
+//     Route::get('/virus-corona', [PrefixController::class, 'corona']);
+// });
 
-//nomor 4
-Route::prefix('provinsi')->group(function(){
-    Route::get('/jawa-timur', [PrefixController::class, 'jawatimur']);
-    Route::get('/jawa-barat', [PrefixController::class, 'jawabarat']);
-    Route::get('/jawa-tengah', [PrefixController::class, 'jawatengah']);
-});
+// //nomor 4
+// Route::prefix('provinsi')->group(function(){
+//     Route::get('/jawa-timur', [PrefixController::class, 'jawatimur']);
+//     Route::get('/jawa-barat', [PrefixController::class, 'jawabarat']);
+//     Route::get('/jawa-tengah', [PrefixController::class, 'jawatengah']);
+// });
 
-//nomor 5
-Route::get('/about-us', [AboutController::class, 'index']);
+// //nomor 5
+// Route::get('/about-us', [AboutController::class, 'index']);
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
