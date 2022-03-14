@@ -26,6 +26,15 @@ Route::get('/home', function () {
 Route::get('/about', function () {
     return view('about');
  });
+ Route::get('/blog', function () {
+   return view('blog');
+});
+Route::get('/product', function () {
+   return view('product');
+});
+Route::get('/contact', function () {
+   return view('contact');
+});
 
 //nomor 2
 //Route::get('/about', function () {
