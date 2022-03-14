@@ -194,19 +194,20 @@
                         <div class="col-md-8 offset-md-2">
                             <div class="title">
                                 <h2>Trending <strong class="black">Categories</strong></h2>
-
                             </div>
                         </div>
                     </div>
                     <div class="row">
+                    @foreach($homes as $h)
                         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 margitop">
                             <div class="trending-box">
-                                <figure><img src="images/1.jpg" /></figure>
-                                <h3>Outdoor</h3>
+                                <figure><img src="{{$h -> gambar}}" /></figure>
+                                <h3>{{$h -> nama}}</h3>
 
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                    @endforeach
+                        <!-- <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                             <div class="trending-box">
                                 <figure><img src="images/2.jpg" /></figure>
                                 <h3>Living Room</h3>
@@ -217,9 +218,8 @@
                             <div class="trending-box">
                                 <figure><img src="images/3.jpg" /></figure>
                                 <h3>Bedroom Lighting</h3>
-
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>
@@ -233,7 +233,6 @@
                         <div class="col-md-12">
                             <div class="title">
                                 <h2>Featured <strong class="black">Brands</strong></h2>
-
                             </div>
                         </div>
                     </div>
@@ -281,7 +280,6 @@
                         <div class="col-md-8 offset-md-2">
                             <div class="title">
                                 <h2>Contact <strong class="black">Us</strong></h2>
-
                             </div>
                         </div>
                     </div>
@@ -348,7 +346,6 @@
                                     </ul>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="container">
@@ -375,9 +372,7 @@
                     <div class="copyright">
                         <p>Copyright 2019 All Right Reserved By <a href="https://html.design/">Free html Templates</a></p>
                     </div>
-            
              </div>
-
             </footer>
             <!-- end footer -->
         </div>

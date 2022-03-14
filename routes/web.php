@@ -2,39 +2,31 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PrefixController;
+use App\Http\Controllers\HomeController as BerandaController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
 
 //Praktikum 1
+Route::get('/home', [BerandaController::class, 'home']);
 //nomor 1
-Route::get('/home', function () {
-   return view('home');
-});
-Route::get('/about', function () {
-    return view('about');
- });
- Route::get('/blog', function () {
-   return view('blog');
-});
-Route::get('/product', function () {
-   return view('product');
-});
-Route::get('/contact', function () {
-   return view('contact');
-});
+// Route::get('/home', function () {
+//    return view('home');
+// });
+// Route::get('/about', function () {
+//     return view('about');
+//  });
+//  Route::get('/blog', function () {
+//    return view('blog');
+// });
+// Route::get('/product', function () {
+//    return view('product');
+// });
+// Route::get('/contact', function () {
+//    return view('contact');
+// });
 
 //nomor 2
 //Route::get('/about', function () {
