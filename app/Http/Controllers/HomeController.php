@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use App\Models\Home;
 use Illuminate\Http\Request;
 
@@ -14,7 +14,9 @@ class HomeController extends Controller
             'homes'=>home::all()
         ]);
     }
-    public function index(){
-        return view('beranda');
+    public function index()
+    {
+        $user = Auth::user();
+        return view('beranda',['user'=> $user]);
     }
 }
