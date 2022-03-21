@@ -14,4 +14,7 @@ class HomeController extends Controller
             'homes'=>home::all()
         ]);
     }
+    public function index(){
+        return view('beranda');
+    }
 }

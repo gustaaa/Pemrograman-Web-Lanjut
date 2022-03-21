@@ -6,7 +6,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PrefixController;
 use App\Http\Controllers\HomeController as BerandaController;
-
+use Illuminate\Support\Facades\Auth;
 
 
 //Praktikum 1
@@ -15,18 +15,21 @@ Route::get('/home', [BerandaController::class, 'home']);
 // Route::get('/home', function () {
 //    return view('home');
 // });
-// Route::get('/about', function () {
-//     return view('about');
+Route::get('/about', function () {
+    return view('about');
+});
+Route::get('/blog', function () {
+   return view('blog');
+});
+Route::get('/product', function () {
+   return view('product');
+});
+Route::get('/contact', function () {
+   return view('contact');
+});
+// Route::get('/login', function () {
+//     return view('login');
 //  });
-//  Route::get('/blog', function () {
-//    return view('blog');
-// });
-// Route::get('/product', function () {
-//    return view('product');
-// });
-// Route::get('/contact', function () {
-//    return view('contact');
-// });
 
 //nomor 2
 //Route::get('/about', function () {
@@ -90,3 +93,7 @@ Route::get('/home', [BerandaController::class, 'home']);
 // Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
