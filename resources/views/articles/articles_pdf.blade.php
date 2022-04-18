@@ -25,8 +25,7 @@
     </thead> 
         <tbody> 
             @foreach($articles as $a) 
-            <tr> 
-                
+            <tr>      
                 <td>{{ $a->title }}</td> 
                 <td>{{ $a->content }}</td> 
                 <td><img width="100px" src="{{ storage_path('/app/public/'.$a->featured_image) }}"></td>
