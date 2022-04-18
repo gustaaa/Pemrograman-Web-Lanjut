@@ -9,7 +9,7 @@ use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Auth;
 
 Route::resource('articles', ArticleController::class);
-
+Route::get('/article/cetak_pdf', [ArticleController::class, 'cetak_pdf'])->name('cetak_pdf');
 //Praktikum 1
 // Route::get('/home', [BerandaController::class, 'home']);
 // //nomor 1

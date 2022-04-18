@@ -21,8 +21,7 @@ required="required" name="content" value="{{$article->content}}"></br>
 required="required" name="image" value="{{$article->featured_image}}"></br>
 <img width="150px" src="{{asset('storage/'.$article->featured_image)}}">
 </div>
-<button type="submit" class="btn btn-primary float-right">Ubah
-Data</button>
+<button type="submit" class="btn btn-primary float-right">Ubah Data</button>
 </form>
 </div>
 @endsection
