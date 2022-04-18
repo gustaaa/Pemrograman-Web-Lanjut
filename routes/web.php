@@ -1,32 +1,33 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PageController;
-use App\Http\Controllers\AboutController;
+//use App\Http\Controllers\PageController;
+//use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\PrefixController;
-use App\Http\Controllers\HomeController as BerandaController;
+//use App\Http\Controllers\PrefixController;
+//use App\Http\Controllers\HomeController as BerandaController;
 use Illuminate\Support\Facades\Auth;
 
+Route::resource('articles', ArticleController::class);
 
 //Praktikum 1
-Route::get('/home', [BerandaController::class, 'home']);
-//nomor 1
-// Route::get('/home', function () {
-//    return view('home');
+// Route::get('/home', [BerandaController::class, 'home']);
+// //nomor 1
+// // Route::get('/home', function () {
+// //    return view('home');
+// // });
+// Route::get('/about', function () {
+//     return view('about');
 // });
-Route::get('/about', function () {
-    return view('about');
-});
-Route::get('/blog', function () {
-   return view('blog');
-});
-Route::get('/product', function () {
-   return view('product');
-});
-Route::get('/contact', function () {
-   return view('contact');
-});
+// Route::get('/blog', function () {
+//    return view('blog');
+// });
+// Route::get('/product', function () {
+//    return view('product');
+// });
+// Route::get('/contact', function () {
+//    return view('contact');
+// });
 // Route::get('/login', function () {
 //     return view('login');
 //  });

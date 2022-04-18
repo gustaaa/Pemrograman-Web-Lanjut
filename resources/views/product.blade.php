@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.niture')
 @section('content')
       <!-- loader  -->
       <div class="loader_bg">
